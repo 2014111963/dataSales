@@ -315,7 +315,7 @@
   }
 
   .searchclass {
-    background: url("../../assets/images/home-bg.jpg") no-repeat center;
+    background: url("../../assets/images/home-bg.png") no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100%;

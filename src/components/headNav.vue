@@ -2,8 +2,8 @@
     <div class="home-Header">
   <Row>
     <i-col span="12" offset="2">
-      <a class="home-Header-logo">
-        <img src="../assets/images/logo.png" style="width: 120px;">
+      <a class="home-Header-logo" href="/">
+        <img src="/static/kehutang_logo.png" style="margin-top: 3px">
       </a>
       <div class="home-Header-menu">
         <span @click="backToMain" v-bind:class="{active: this.$store.state.activePage===1}" class="menuItem">首页</span>
@@ -113,7 +113,7 @@
   .home-Header-menu {
     float: left;
     padding-top: 3px;
-    margin-left: 3px;
+    margin-left: 15px;
   }
 
   .home-Header-menu span {

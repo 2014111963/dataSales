@@ -1,84 +1,82 @@
 <template>
   <div>
     <div>
-      <Row>
-        <i-col span="18" offset="4">
-          <div style="padding-top: 60px;padding-right: 200px">
-            <div class="user-level" v-if="this.$store.state.isLogin">
-              <span style="font-size: 18px;">您当前的会员等级为：</span>
-              <div class="upgrade-now-vip">
-                <img src="https://file.iviewui.com/dist/3eb78a60b677c55480495de82d69c8bc.png"/>
-                <span style="font-weight: 700;">{{this.memberLevel.value}}</span>
-              </div>
-              <p style="font-size: 16px;margin-top: 10px;">到期时间：{{this.$store.state.expirationDate}}</p>
-            </div>
-            <div class="user-level" v-if="!this.$store.state.isLogin">
-              <span style="font-size: 18px;"><router-link :to="{name: 'login'}">登录</router-link>，免费获取会员权限</span>
-            </div>
+      <div style="padding-top: 60px;">
+        <div class="user-level" v-if="this.$store.state.isLogin">
+          <span style="font-size: 18px;">您当前的会员等级为：</span>
+          <div class="upgrade-now-vip">
+            <img src="https://file.iviewui.com/dist/3eb78a60b677c55480495de82d69c8bc.png"/>
+            <span style="font-weight: 700;">{{this.memberLevel.value}}</span>
           </div>
-          <Row>
-            <i-col span="8" style="padding-right: 8px;padding-left: 8px;">
-              <Card class="upgrade-item free" :padding="0">
-                <div class="upgrade-item-tail bg"></div>
-                <div class="upgrade-item-name">普通用户</div>
-                <div class="upgrade-item-icon">
-                  <img src="https://file.iviewui.com/dev-dist/3eb78a60b677c55480495de82d69c8bc.png">
-                </div>
-                <div class="upgrade-item-coast color"><b>永久免费</b></div>
-                <div class="upgrade-item-line"></div>
-                <div class="upgrade-item-buy bg">永久有效</div>
-                <div class="upgrade-item-line"></div>
-                <div class="upgrade-list color">
-                  <li>
-                    <a href="#privilege">查看更多权限</a>
-                    <Icon type="ios-arrow-forward"/>
-                  </li>
-                </div>
-              </Card>
-            </i-col>
-            <i-col span="8" style="padding-right: 8px;padding-left: 8px;">
-              <Card class="upgrade-item diamond" :padding="0">
-                <div class="upgrade-item-tail bg"></div>
-                <div class="upgrade-item-name">VIP会员</div>
-                <div class="upgrade-item-icon"><img
-                  src="https://file.iviewui.com/dev-dist/3eb78a60b677c55480495de82d69c8bc.png"></div>
-                <div class="upgrade-item-coast color">
-                  <span>¥</span> <b>19</b> <em>/月</em>
-                </div>
-                <div class="upgrade-item-line"></div>
-                <div class="upgrade-item-buy bg">购买</div>
-                <div class="upgrade-item-line"></div>
-                <div class="upgrade-list color">
-                  <li>
-                    <a href="#privilege">查看更多权限</a>
-                    <Icon type="ios-arrow-forward"/>
-                  </li>
-                </div>
-              </Card>
-            </i-col>
-            <i-col span="8" style="padding-right: 8px;padding-left: 8px;">
-              <Card class="upgrade-item supremacy" :padding="0">
-                <div class="upgrade-item-tail bg"></div>
-                <div class="upgrade-item-name">尊享会员</div>
-                <div class="upgrade-item-icon"><img
-                  src="https://file.iviewui.com/dev-dist/3eb78a60b677c55480495de82d69c8bc.png"></div>
-                <div class="upgrade-item-coast color">
-                  <span>¥</span> <b>59</b> <em>/月</em>
-                </div>
-                <div class="upgrade-item-line"></div>
-                <div class="upgrade-item-buy bg">购买</div>
-                <div class="upgrade-item-line"></div>
-                <div class="upgrade-list color">
-                  <li>
-                    <a href="#privilege">查看更多权限</a>
-                    <Icon type="ios-arrow-forward"/>
-                  </li>
-                </div>
-              </Card>
-            </i-col>
-          </Row>
+          <p style="font-size: 16px;margin-top: 10px;">到期时间：{{this.$store.state.expirationDate}}</p>
+        </div>
+        <div class="user-level" v-if="!this.$store.state.isLogin">
+          <span style="font-size: 18px;"><router-link :to="{name: 'login'}">登录</router-link>，免费获取会员权限</span>
+        </div>
+      </div>
+      <div>
+      <Row>
+        <i-col span="4" offset="4">
+          <Card class="upgrade-item free" :padding="1">
+            <div class="upgrade-item-tail bg"></div>
+            <div class="upgrade-item-name">普通用户</div>
+            <div class="upgrade-item-icon">
+              <img src="https://file.iviewui.com/dev-dist/3eb78a60b677c55480495de82d69c8bc.png">
+            </div>
+            <div class="upgrade-item-coast color"><b>永久免费</b></div>
+            <div class="upgrade-item-line"></div>
+            <div class="upgrade-item-buy bg">永久有效</div>
+            <div class="upgrade-item-line"></div>
+            <div class="upgrade-list color">
+              <li>
+                <a href="#privilege">查看更多权限</a>
+                <Icon type="ios-arrow-forward"/>
+              </li>
+            </div>
+          </Card>
+        </i-col>
+        <i-col span="4" offset="2">
+          <Card class="upgrade-item diamond" :padding="1">
+            <div class="upgrade-item-tail bg"></div>
+            <div class="upgrade-item-name">VIP会员</div>
+            <div class="upgrade-item-icon"><img
+              src="https://file.iviewui.com/dev-dist/3eb78a60b677c55480495de82d69c8bc.png"></div>
+            <div class="upgrade-item-coast color">
+              <span>¥</span> <b>19</b> <em>/月</em>
+            </div>
+            <div class="upgrade-item-line"></div>
+            <div class="upgrade-item-buy bg">购买</div>
+            <div class="upgrade-item-line"></div>
+            <div class="upgrade-list color">
+              <li>
+                <a href="#privilege">查看更多权限</a>
+                <Icon type="ios-arrow-forward"/>
+              </li>
+            </div>
+          </Card>
+        </i-col>
+        <i-col span="4" offset="2">
+          <Card class="upgrade-item supremacy" :padding="1">
+            <div class="upgrade-item-tail bg"></div>
+            <div class="upgrade-item-name">尊享会员</div>
+            <div class="upgrade-item-icon"><img
+              src="https://file.iviewui.com/dev-dist/3eb78a60b677c55480495de82d69c8bc.png"></div>
+            <div class="upgrade-item-coast color">
+              <span>¥</span> <b>59</b> <em>/月</em>
+            </div>
+            <div class="upgrade-item-line"></div>
+            <div class="upgrade-item-buy bg">购买</div>
+            <div class="upgrade-item-line"></div>
+            <div class="upgrade-list color">
+              <li>
+                <a href="#privilege">查看更多权限</a>
+                <Icon type="ios-arrow-forward"/>
+              </li>
+            </div>
+          </Card>
         </i-col>
       </Row>
+      </div>
     </div>
     <div style="padding-top: 20px">
       <hr/>
@@ -229,7 +227,6 @@
   }
 
   .upgrade-item {
-    width: 250px;
     position: relative;
     padding-bottom: 16px;
   }

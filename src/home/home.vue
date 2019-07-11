@@ -21,8 +21,8 @@
       </div>
       <div>
         <Row style="padding-top: 30px">
-          <i-col span="6" offset="7">
-            <Card style="width:280px">
+          <i-col span="4" offset="6">
+            <Card>
               <div style="text-align:center">
                 <img src="../assets/images/search.png">
                 <h2 style="padding-top: 12px">全国工商信息无限查询</h2>
@@ -31,8 +31,8 @@
               </div>
             </Card>
           </i-col>
-          <i-col span="8">
-            <Card style="width:280px">
+          <i-col span="4" offset="4">
+            <Card>
               <div style="text-align:center">
                 <img src="../assets/images/data.png">
                 <h2 style="padding-top: 12px">数据下载</h2>
@@ -78,7 +78,7 @@
           <div style="color: white;font-size: 20px">
             <p class="item_title">客户堂</p>
             <div>
-              <p href="/product/" target="_blank">产品</p>
+              <p href="/product" target="_blank">产品</p>
               <p href="/company/" target="_blank">公司名录</p>
             </div>
           </div>
@@ -87,7 +87,7 @@
           <div class="info_item info_item-us">
             <p style="color: white;font-size: 20px">关于我们</p>
             <div style="color: white;font-size: 20px">
-              <p href="/about" target="_blank">公司介绍</p>
+              <p href="/" target="_blank">公司介绍</p>
               <p href="/name/" target="_blank">联系人名录</p>
             </div>
           </div>
@@ -99,6 +99,7 @@
 
 <script>
   import headNav from '../components/headNav'
+
   export default {
     components: {
       headNav
@@ -155,7 +156,7 @@
   }
 
   .searchclass {
-    background: url("../assets/images/home-bg.jpg") no-repeat center;
+    background: url("../assets/images/home-bg.png") no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100%;

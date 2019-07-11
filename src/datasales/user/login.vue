@@ -4,7 +4,6 @@
     <span @click="index" style="font-size: 38px; color: red; cursor:pointer">
       客户堂</span>
     </div>
-    <p>8888</p>
     <Card dis-hover v-show="cardStatus.login" class="center">
       <p slot="title" style="text-align: center; font-size: 20px">登录客户堂</p>
       <Form ref="formInline" :model="loginForm" :rules="loginRuleInline">
